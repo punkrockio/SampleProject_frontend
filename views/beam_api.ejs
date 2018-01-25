@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard HTML Template</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Tamerlan Soziev" name="author">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="http://light.pinsupreme.com/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="http://fast.fonts.net/cssapi/487b73f1-c2d1-43db-8526-db577e4c822b.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="css/main.css?version=4.1.0" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+
+
+    <dependencies id="angularjs">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js'></script>
+        <script type="text/javascript" src="js/angular.app.js"></script>
+        <script type="text/javascript" src="js/services/UserService.js"></script>
+        <script type="text/javascript" src="js/services/DevicesService.js"></script>
+    </dependencies>
+
+</head>
+
+<body ng-app="BeamApp" ng-controller="BeamController">
+    <div class="all-wrapper menu-side">
+        <div class="layout-w">
+            <!-- ------------------START - Mobile Menu------------------ -->
+            <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+                <div class="mm-logo-buttons-w"><a class="mm-logo" href="#"><img src="img/logo.png"><span>Clean Admin</span></a>
+                    <div class="mm-buttons">
+                        <div class="content-panel-open">
+                            <div class="os-icon os-icon-grid-circles"></div>
+                        </div>
+                        <div class="mobile-menu-trigger">
+                            <div class="os-icon os-icon-hamburger-menu-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">Maria Gomez</div>
+                            <div class="logged-user-role">Administrator</div>
+                        </div>
+                    </div>
+                    <!--------------------START - Mobile Menu List-------------------->
+                    <ul class="main-menu">
+                        <li >
+                        <!-- <li class="DOESNT-has-sub-menu"> -->
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-window-content"></div>
+                                </div><span>Dashboard</span></a>
+                            
+                        </li>
+                        <li ng-attr-class="{{ (resource=='user' ? currentPage : '') }}">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-hierarchy-structure-2"></div>
+                                </div><span>Users</span></a>
+                            
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-delivery-box-2"></div>
+                                </div><span>Devices</span></a>
+                            
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-newspaper"></div>
+                                </div><span>Scenarios</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Scenarios</a></li>
+                                    <li><a href="#">Scenarios - Days </a></li>
+                                    <li><a href="#">Scenarios - Weeks</a></li>
+                                    <li><a href="#">Scenarios - Months </a></li>
+                                    <li><a href="#">Scenarios - Years</a></li>
+                                </ul>
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-pencil-12"></div>
+                                </div><span>Predictions</span></a>
+                            
+                        </li>
+                        
+                        
+                    </ul>
+                    <!--------------------
+END - Mobile Menu List
+-------------------->
+                    <!-- <div class="mobile-menu-magic">
+                        <h4>Light Admin</h4>
+                        <p>Clean Bootstrap 4 Template</p>
+                        <div class="btn-w"><a class="btn btn-white btn-rounded" href="https://themeforest.net/item/light-admin-clean-bootstrap-dashboard-html-template/19760124?ref=Osetin" target="_blank">Purchase Now</a></div>
+                    </div> -->
+                </div>
+            </div>
+            <!--------------------
+END - Mobile Menu
+-------------------->
+            <div class="desktop-menu menu-side-w menu-activated-on-click">
+                <div class="logo-w">
+                    <a class="logo" href="#">
+                        <div class="logo-element"></div>
+                        <div class="logo-label"> Beam Energy </div>
+                    </a>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="logged-user-i">
+                            <div class="avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                            <div class="logged-user-info-w">
+                                <div class="logged-user-name"> Listy Listerson </div>
+                                <div class="logged-user-role">Administrator</div>
+                            </div>
+                            <div class="logged-user-menu">
+                                <div class="logged-user-avatar-info">
+                                    <div class="avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                                    <div class="logged-user-info-w">
+                                        <div class="logged-user-name">  Listy Listerson </div>
+                                        <div class="logged-user-role">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="bg-icon"><i class="os-icon os-icon-wallet-loaded"></i></div>
+                                <ul>
+                                    <li><a href="#"><i class="os-icon os-icon-mail-01"></i><span>Incoming Mail</span></a></li>
+                                    <li><a href="#"><i class="os-icon os-icon-user-male-circle2"></i><span>Profile Details</span></a></li>
+                                    <li><a href="#"><i class="os-icon os-icon-coins-4"></i><span>Billing Details</span></a></li>
+                                    <li><a href="#"><i class="os-icon os-icon-others-43"></i><span>Notifications</span></a></li>
+                                    <li><a href="#"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="main-menu">
+                        <li ng-class="{'currentPage': resource=='dashboard'}">
+                        <!-- <li class="DOESNT-has-sub-menu"> -->
+                            <a href="#!/dashboard/">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-window-content"></div>
+                                </div><span>Dashboard</span></a>
+                            
+                        </li>
+
+                        <li ng-class="{'currentPage': resource=='user'}">
+                            <a href="#!/user/">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-hierarchy-structure-2"></div>
+                                </div><span>Users</span></a>
+                            
+                        </li>
+                        <li ng-class="{'currentPage': resource=='device'}">
+                            <a href="#!/device/">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-delivery-box-2"></div>
+                                </div><span>Devices</span></a>
+                                
+                        </li>
+                        
+                        <li ng-class="{'currentPage has-sub-menu': resource=='scenario', 'has-sub-menu': resource!='scenario' }">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-newspaper"></div>
+                                </div><span>Scenarios</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="#!/scenario/">Scenarios</a></li>
+                                    <li><a href="#!/scenario/day">Scenarios - Days </a></li>
+                                    <li><a href="#!/scenario/week">Scenarios - Weeks</a></li>
+                                    <li><a href="#!/scenario/month">Scenarios - Months </a></li>
+                                    <li><a href="#!/scenario/year">Scenarios - Years</a></li>
+                                </ul>
+                            
+                        </li>
+                        <li ng-class="{'currentPage': resource=='prediction'}">
+                            <a href="#!/prediction/">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-pencil-12"></div>
+                                </div><span>Predictions</span></a>
+                            
+                        </li>
+                        <!-- 
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-email-2-at2"></div>
+                                </div><span>Emails</span></a>
+                            
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-user-male-circle"></div>
+                                </div><span>Users</span></a>
+                            
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-tasks-checked"></div>
+                                </div><span>Forms</span></a>
+                            
+                        </li>
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-grid-squares"></div>
+                                </div><span>Tables</span></a>
+                            
+                        </li> -->
+                        <li class="DOESNT-has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-robot-1"></div>
+                                </div><span> AI </span></a>
+                            
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="content-w">
+                <!--------------------START - Breadcrumbs-------------------->
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#"> Beam  </a></li>
+                    <li class="breadcrumb-item"><span> Dashboard </span></li>
+                </ul>
+                <!-- ~~~~~~~~~~~~~~~~~~
+                END - Breadcrumbs
+                ~~~~~~~~~~~~~~~~~~ -->
+
+                <div class="content-i" ng-view></div>
+            </div>
+        </div>
+        <div class="display-type"></div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="bower_components/dropzone/dist/dropzone.js"></script>
+    <script src="bower_components/editable-table/mindmup-editabletable.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+    <script src="js/main.js?version=4.1.0"></script>
+    
+</body>
+
+</html>

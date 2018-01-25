@@ -1,0 +1,57 @@
+<div class="content-i">
+    <div class="content-box">
+        <div class="element-wrapper">
+            <h6 class="element-header"> User Tables </h6>
+            <div class="element-box">
+                <h5 class="form-header"> All Users</h5>
+                <div class="form-desc">
+
+                </div>
+                <table id="editableTable" class="table table-editable table-striped table-lightfont">
+                    <thead>
+                        <tr>
+                            <th> View </th>
+                            <th> Name</th>
+                            <th> Email</th>
+                            <!-- <th>  </th>
+                            <th>  </th>
+                            <th>  </th> -->
+                            <th>ID</th>
+                            
+                            <th> Save </th>
+                            <th> Delete </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    	<tr ng-repeat="user in users">
+                            <td> 
+                                <button class="btn btn-xs"> 
+                                    <i class="icon-eyeglass"></i> 
+                                </button> 
+                            </td>
+                    	    <td>{{user.name}}</td>
+                    	    <td>{{user.email}}</td>
+                    	    <td style="font-size: 10px; color: rgba(0,0,0,.2)">
+                                <a href="#!/user/">
+                                {{user.id}}
+                                </a>
+                            </td>
+                            <td> 
+                                <button class="btn btn-xs btn-info"> <i class="icon-like"></i> </button> 
+                            </td>
+                            <td> 
+                                <button class="btn btn-xs btn-danger"> 
+                                    <i class="icon-dislike"></i> 
+                                </button> 
+                            </td>
+                    	</tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

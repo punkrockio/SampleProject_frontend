@@ -1,0 +1,64 @@
+<div class="content-i">
+    <div class="content-box">
+        <div class="element-wrapper">
+            <h6 class="element-header"> Devices Tables </h6>
+            <div class="element-box">
+                <h5 class="form-header"> All Devices</h5>
+                <div class="form-desc">
+
+                </div>
+                <table 
+                	id="editableTable" 
+                	class="table table-editable table-striped table-lightfont">
+                    <thead>
+                        <tr>
+                            <th> View </th>
+                            <th> User ID </th>
+                            <th> MAC Address </th>
+                            <th> MNI </th>
+                            <th> Hardware Vers </th>
+                            <th> Lat </th>
+                            <th> Long </th>
+                            <th> Redback ID </th>
+                            
+                            <th>ID</th>
+                            
+                            <th> Save </th>
+                            <th> Delete </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    	<tr ng-repeat="device in devices">
+                            <td> 
+                                <button class="btn btn-xs"> 
+                                    <i class="icon-eyeglass"></i> 
+                                </button> 
+                            </td>
+                    	    <td style="color: #0088ff">{{device.user_id}}</td>
+                    	    <td>{{device.mac_address}}</td>
+                    	    <td>{{device.nmi}}</td>
+                    	    <td>{{device.hardware_vers}}</td>
+                    	    <td>{{device.lat}}</td>
+                    	    <td>{{device.long}}</td>
+                    	    <td>{{device.redback_id}}</td>
+                    	    
+                    	    <td style="font-size: 10px; color: rgba(0,0,0,.2)">{{device.id}}</td>
+                            <td> 
+                                <button class="btn btn-xs btn-info"> <i class="icon-like"></i> </button> 
+                            </td>
+                            <td> 
+                                <button class="btn btn-xs btn-danger"> 
+                                    <i class="icon-dislike"></i> 
+                                </button> 
+                            </td>
+                    	</tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
